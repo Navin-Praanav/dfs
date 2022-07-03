@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+          padding: 2rem;
+        }
+    </style>
+    <title>Dfs</title>
+</head>
+<body>
+    <form action="{{ url_for('data') }}" method="POST">
+    <div>
+        <label for="row">Row</label>
+        <input type="text" id="row" name="row">
+    </div>
+
+    <div>
+        <label for="cloumn">Column</label>
+        <input type="text" id="column" name="column">
+    </div>
+    <div>
+        <button type="submit">Insert</button>
+    </div>
+    </form>
+
+    <div>
+        <form action="{{ url_for('matrix',t1=t1,t2=t2) }}" method="POST">
+            <table>
+                {% for i in arr %}
+                <tr>
+                    {% for j in arr2%}
+                    <td><input type="text" name="index{{i}}{{j}}"></td>
+                    <br> 
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+            {% if t %}
+            <button type="submit"> Add</button>
+            {% endif %}
+        </form>
+
+    </div>
+</body>
+</html>
