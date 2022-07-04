@@ -5,17 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
-    <style>
-        table, th, td {
-          border: 1px solid black;
-          border-collapse: collapse;
-          padding: 2rem;
-        }
-    </style>
-    <title>Dfs</title>
+    <script src="{{ url_for('static',filename='js/index.js') }}"></script>
+    <title>Dfs and Bfs</title>
+
 </head>
-<body>
-    <form action="{{ url_for('data') }}" method="POST">
+<body onload="flashMessage(),flashMessage2()">
+    <script>
+        function flashMessage() {
+          if ("{{ flash_message }}" == "True") {
+            alert("Enter either 1 or 0");
+            return false;
+          }
+        }
+        function flashMessage2() {
+          if ("{{ flash_message2 }}" == "True") {
+            alert("No input in the matrix");
+            return false;
+          }
+        }
+      </script>
+    <h2 class="h">BFS And DFS Visualizer</h2>
+    <form class="form1" action="{{ url_for('data') }}" method="POST" autocomplete="off"  >
     <div>
         <label for="row">Row</label>
         <input type="text" id="row" name="row">
@@ -26,27 +36,49 @@
         <input type="text" id="column" name="column">
     </div>
     <div>
-        <button type="submit">Insert</button>
+        <label for="start">start</label>
+        <input type="text" id="start" name="start">
+    </div>
+
+    <div>
+    </div>
+    <div>
+        <button class="btn" type="submit" onclick="return validateform()">Insert</button>
     </div>
     </form>
 
-    <div>
-        <form action="{{ url_for('matrix',t1=t1,t2=t2) }}" method="POST">
-            <table>
-                {% for i in arr %}
-                <tr>
-                    {% for j in arr2%}
-                    <td><input type="text" name="index{{i}}{{j}}"></td>
-                    <br> 
+    <div class="mat">
+        <div>
+
+            <form class="form2" action="{{ url_for('matrix',t1=t1,t2=t2) }}" method="POST" autocomplete="off">
+                <table>
+                    <tc ><td></td></tc>
+                    {% for j in arr2 %}
+                    <tc>
+                        <td  class="tdout">
+                            {{j}}
+                        </td>
+                    </tc>    
+
                     {% endfor %}
-                </tr>
-                {% endfor %}
-            </table>
-            {% if t %}
-            <button type="submit"> Add</button>
-            {% endif %}
-        </form>
+                    {% for i in arr %}
+                    <tr>
+                        <td class="tdout">{{ i }}</td>
+                        {% for j in arr2 %}
+                            <td><input type="text" name="index{{i}}{{j}}" id="index{{i}}{{j}}"></td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </table>
+                <div class="but">
+                    {% if t %}  
+                    <button class="btn2" type="submit" > Add</button>
+                    {% endif %}
+                </div>
+            </form>
+        </div>
 
     </div>
+
 </body>
 </html>

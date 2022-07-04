@@ -4,18 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>output</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/output.css')}}">
+    <title>outputGraph</title>
 </head>
 <body>
-    <h1>Output</h1>
-    <h2>DFS</h2>
-    {% for i in output1%}
-        <p>{{ i }}</p>
-    {% endfor %}
+    <script>
+        mermaid.initialize(config);
+    </script>
 
-    <h2>BFS</h2>
-    {% for i in output2%}
-        <p>{{ i }}</p>
-    {% endfor %}
+    <h2 class="h">Given graph</h2>
+    <div class="mermaid">
+        graph TD
+        {% for i in graph %}
+            {{i[0]}}(({{ i[0] }}))-->{{i[1]}}(({{ i[1] }}))
+        {% endfor %}
+    </div>
+    <div class="btn">
+            <a href="{{ url_for('dfs',output1=output1,output_dfs=output_dfs) }}" >dfs</a>
+            <a href="{{ url_for('bfs',output2=output2,output_bfs=output_bfs) }}">bfs</a>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    
+
 </body>
 </html>

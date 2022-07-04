@@ -8,7 +8,17 @@ def dfs_ouptut(matrix,start=0,visited=[]):
                         (i not in visited)):
                     ret_dfs(matrix,i,visited)
     ret_dfs(matrix,start,visited)
-    return output
+    s=''
+    l=0
+    for i in output:
+        s+=str(i)
+        s+="(("
+        s+=str(i)
+        s+='))'
+        if l!=len(output)-1:
+            s+='-->'
+        l+=1
+    return [output,s]
 
 
 def bfs_ouptut(matrix,start=0,visited=[]):
@@ -27,9 +37,15 @@ def bfs_ouptut(matrix,start=0,visited=[]):
                     q.append(i)
                     visited.append(i)
     ret_bfs(start)
-    return output
-
-
-
-
-# print(bfs_ouptut([[0, 1, 1, 0], [0, 1, 0, 1], [1, 0, 0, 0], [0, 1, 0, 0]],0,[]))
+    print(output)
+    s=''
+    l=0
+    for i in output:
+        s+=str(i)
+        s+="(("
+        s+=str(i)
+        s+='))'
+        if l!=len(output)-1:
+            s+='-->'
+        l+=1
+    return [output,s]
