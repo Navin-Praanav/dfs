@@ -28,7 +28,7 @@ A list of technologies used within the project:
 * [HTML](https://en.wikipedia.org/wiki/HTML) :Frontend
 * [CSS](https://en.wikipedia.org/wiki/CSS) :Frontend
 * [JAVASCRIPT](https://en.wikipedia.org/wiki/JavaScript) :Frontend
- * [Mermaid-js](https://mermaid-js.github.io/mermaid/#/)
+   * [Mermaid-js](https://mermaid-js.github.io/mermaid/#/)
 * [Python](https://en.wikipedia.org/wiki/JavaScript) :Backend
 * [Flask](https://en.wikipedia.org/wiki/JavaScript) :Backend
 
@@ -62,14 +62,12 @@ HOW TO RUN THE PROJECT
 * **STEP 1** - Enter the size of the adjacency matrix and starting vertex.**Row** input indicates height and **Column** input indicates width of the adjacency matrix. 
 ![image](https://user-images.githubusercontent.com/91049629/177589898-e8481a1a-1b43-412a-b274-a179efd09751.png)
 * **STEP 2** - Click insert
-* 
 ![image](https://user-images.githubusercontent.com/91049629/177590206-a81b88bf-5037-40d4-9a9e-67f3473264f9.png)
 
 * **STEP 3** - A table will be created. On clicking the table enter either 1 or 0 ~(default 0)~.**Example:** If there exist a connect between a vertex 1 and 2 then add 1 to the table cell where the row is 1 and the column is 2.
 ![image](https://user-images.githubusercontent.com/91049629/177590388-f59f473e-8462-499a-b870-6f71a15d4b48.png)
 
 * **STEP 4** - Click add.
-* 
 ![image](https://user-images.githubusercontent.com/91049629/177590469-a46e5897-3e09-4a24-970b-ecebbe74aa49.png)
 
 * **STEP 5** - To the give adjacency matrix graph will be created.
