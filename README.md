@@ -96,4 +96,4 @@ Mermaid is a JavaScript based diagramming and charting tool that uses Markdown-i
   
 CREDITS
 ------------
-A special shout-out to **Kaushik** for working with me in this project.
+A special shout-out to [**Kaushik**](https://github.com/Kaushik-Ss) for working with me in this project.
