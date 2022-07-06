@@ -7,7 +7,7 @@ CONTENTS OF THIS FILE
  * Technologies
  * Project Description
    * Main Page
-   * Ouput Graph
+   * Given Graph
    * Bfs Ouput
    * Dfs Ouput
 * How to Run the Project
@@ -42,7 +42,7 @@ PROJECT DESCRIPTION
 
 
   
-### OUTPUT GRAPH
+### GIVEN GRAPH
   
   ![image](https://user-images.githubusercontent.com/91049629/177582930-7e796aea-fd2d-4d1f-a1b6-8e25dc9e352d.png)
 
