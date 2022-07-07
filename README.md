@@ -94,6 +94,15 @@ Mermaid is a JavaScript based diagramming and charting tool that uses Markdown-i
         B --> D
   ```
   
+CONTRIBUTORS
+------------
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/Kaushik-Ss"><img src="https://avatars.githubusercontent.com/u/75175772?v=4" width="150px;" alt=""/><br /><sub><b>Kaushik S</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/20i230-Navin"><img src="https://avatars.githubusercontent.com/u/91049629?v=4" width="150px;" alt=""/><br /><sub><b>Navin Praanav P</b></sub></a><br /></td>
+  </tr>
+</table>
+
 CREDITS
 ------------
 A special shout-out to [**Kaushik**](https://github.com/Kaushik-Ss) for working with me in this project.
